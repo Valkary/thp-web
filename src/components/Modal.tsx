@@ -47,7 +47,7 @@ export default function Modal({ display, closeModal }: Props) {
     return (
         <motion.div
             id="modal"
-            className="modal h-screen w-screen absolute top-0 right-0 z-20 bg-black/95 text-white pt-36 overflow-hidden"
+            className="modal min-h-screen min-w-screen absolute top-0 right-0 z-20 bg-black/95 text-white pt-36 overflow-hidden"
             initial={{ opacity: 0 }}
             animate={modalBodyControls}
         >
@@ -57,17 +57,17 @@ export default function Modal({ display, closeModal }: Props) {
                 initial="hidden"
                 animate="visible"
             >
-                <motion.a href="/#about" variants={item} onClick={closeModal}>
-                    Nosotros
+                <motion.a href="/#hero" variants={item} onClick={closeModal}>
+                    Inicio
                 </motion.a>
                 <motion.a href="/#why" variants={item} onClick={closeModal}>
-                    Principios
-                </motion.a>
-                <motion.a href="#contact" variants={item} onClick={closeModal}>
-                    Contacto
+                    Nosotros
                 </motion.a>
                 <motion.a href="/catalogue" variants={item} onClick={closeModal}>
-                    Catálogo
+                    Productos
+                </motion.a>
+                <motion.a href="#contact" variants={item} onClick={closeModal}>
+                Contacto
                 </motion.a>
             </motion.div>
         </motion.div>

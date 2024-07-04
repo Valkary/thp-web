@@ -68,8 +68,8 @@ export default function Filtros(props: Props) {
                                 return (
                                     <button
                                         class={`
-                                            px-4 py-2 border-2 border-solid border-gray-600 rounded-lg mx-1 my-1 tracking-wide uppercase
-                                            ${isSelected() ? "text-black" : "bg-black font-bold text-white"}
+                                            px-4 py-2 border-2 border-solid border-thp-accent rounded-lg mx-1 my-1 tracking-wide uppercase text-thp-white
+                                            ${isSelected() ? "bg-thp-primary" : "bg-thp-black font-bold"}
                                         `}
                                         onClick={() => handleClick("calidad", calidad)}
                                     >
@@ -93,9 +93,9 @@ export default function Filtros(props: Props) {
                                 return (
                                     <button
                                         class={`
-                                            px-4 py-2 border-2 border-solid border-gray-600 rounded-lg mx-1 my-1 tracking-wide uppercase
-                                            ${isSelected() ? "text-black" : "bg-black font-bold text-white"}
-                                        `}
+                                        px-4 py-2 border-2 border-solid border-thp-accent rounded-lg mx-1 my-1 tracking-wide uppercase text-thp-white
+                                        ${isSelected() ? "bg-thp-primary" : "bg-thp-black font-bold"}
+                                    `}
                                         onClick={() => handleClick("color", color)}
                                     >
                                         {color}
@@ -118,9 +118,9 @@ export default function Filtros(props: Props) {
                                 return (
                                     <button
                                         class={`
-                                            px-4 py-2 border-2 border-solid border-gray-600 rounded-lg mx-1 my-1 tracking-wide uppercase
-                                            ${isSelected() ? "text-black" : "bg-black font-bold text-white"}
-                                        `}
+                                        px-4 py-2 border-2 border-solid border-thp-accent rounded-lg mx-1 my-1 tracking-wide uppercase text-thp-white
+                                        ${isSelected() ? "bg-thp-primary" : "bg-thp-black font-bold"}
+                                    `}
                                         onClick={() => handleClick("grabado", grabado)}
                                     >
                                         {grabado}

@@ -5,9 +5,9 @@ type NavbarProps = {};
 
 export default function Navbar({ }: NavbarProps) {
     return (
-        <section id="navbar" className="w-full bg-black flex justify-center top-0 sticky z-20">
-            <motion.div className="w-full flex flex-row items-center justify-center overflow-hidden xl:px-28">
-                <nav className="px-4 lg:px=0 py-8 flex flex-row w-full">
+        <section id="navbar" className="w-full bg-thp-gray flex justify-center top-0 sticky z-50">
+            <motion.div className="w-full flex flex-row items-center justify-center overflow-x-hidden px-4 md:px-20 xl:px-28">
+                <nav className="px-4 lg:px=0 py-2 flex flex-row w-full">
                     <motion.div
                         className="flex items-center w-2/3"
                         initial={{ x: "-150%", }}
@@ -16,22 +16,9 @@ export default function Navbar({ }: NavbarProps) {
                             duration: 0.6
                         }}
                     >
-                        <a href="/">
-                            <div
-                                className="flex items-center justify-center w-16 h-16 rounded-full bg-white"
-                            >
-                                <img src="/thp_logo_nl.png" alt="THP Logo" />
-                            </div>
+                        <a href="/" className="flex items-center justify-center h-16 aspect-square rounded-full">
+                            <img src="/thp_logo_nl.png" alt="THP Logo" />
                         </a>
-
-                        <div className="px-5 text-white text-xl uppercase tracking-widest font-bold">
-                            <p className="hidden md:block">
-                                Transformadora de Hules y Plásticos
-                            </p>
-                            <p className="block md:hidden">
-                                THP
-                            </p>
-                        </div>
                     </motion.div>
 
                     <NavMenu />

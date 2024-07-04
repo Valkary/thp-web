@@ -48,13 +48,11 @@ export default function HamburgerMenu({ }: Props) {
     }, [isOpen]);
 
     return (
-        <>
-            <motion.button className="block lg:hidden px-5 z-30 overflow-hidden" onClick={handleClick} name="hamburguer-menu">
-                <motion.div className="w-[40px] h-[4px] my-2 bg-white" animate={topBarControls} />
-                <motion.div className="w-[40px] h-[4px] my-2 bg-white" animate={middleBarControls} />
-                <motion.div className="w-[40px] h-[4px] my-2 bg-white" animate={bottomBarControls} />
-            </motion.button>
+        <motion.button className="block w-16 aspect-square lg:hidden z-50 overflow-hidden" onClick={handleClick} name="hamburguer-menu">
+            <motion.div className={`w-[40px] h-[4px] my-2 ${isOpen ? "bg-thp-white" : "bg-thp-accent"}`} animate={topBarControls} />
+            <motion.div className={`w-[40px] h-[4px] my-2 ${isOpen ? "bg-thp-white" : "bg-thp-accent"}`} animate={middleBarControls} />
+            <motion.div className={`w-[40px] h-[4px] my-2 ${isOpen ? "bg-thp-white" : "bg-thp-accent"}`} animate={bottomBarControls} />
             <Modal display={isOpen} closeModal={handleClick} />
-        </>
+        </motion.button>
     );
 }
